@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final days = 78;
-    final str = "First Flutter App";
+    final days = 8;
+    final str = "Welcome To Flutter Tutor";
     return Scaffold(
       drawer: Drawer(
         child: Padding(
@@ -14,12 +14,11 @@ class HomePage extends StatelessWidget {
       ),
       appBar: AppBar(
         title: Center(child: Text("Flutter Tutor")),
-        backgroundColor: Colors.yellow,
         shadowColor: Colors.red,
       ),
       body: Center(
         child: Container(
-          child: Text("$str in $days" + "  days"),
+          child: Text("$str" + "\n Learn Flutter in $days"),
         ),
       ),
     );

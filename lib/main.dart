@@ -1,8 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_basics/homePage.dart';
+import 'package:flutter_basics/pages/homePage.dart';
+import 'package:flutter_basics/pages/loginPage.dart';
 
 void main() {
   runApp(MyApp());
+}
+
+// if function has no specified return value , then it's default is null.
+bringVegetable() {
+  return 89;
 }
 
 class MyApp extends StatelessWidget {
@@ -10,7 +16,14 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    
-    return MaterialApp(home: HomePage());
+    return MaterialApp(
+      theme: ThemeData(primarySwatch: Colors.lime),
+      initialRoute: "/home",
+      /*initial route will always HomePage*/
+      routes: {
+        "/home": (context) => HomePage(),
+        "/": (context) => LoginPage(), /* "/" marks the first route*/
+      },
+    );
   }
 }
