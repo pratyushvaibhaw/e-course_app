@@ -14,7 +14,7 @@ class HomePage extends StatelessWidget {
       ),
       appBar: AppBar(
         title: Center(child: Text("Flutter Tutor")),
-        shadowColor: Colors.red,
+        shadowColor: Color.fromARGB(255, 174, 232, 220),
       ),
       body: Center(
         child: Container(
