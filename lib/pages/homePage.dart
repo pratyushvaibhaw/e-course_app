@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_basics/utils/routes.dart';
+import 'package:flutter_basics/widgets/drawer.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -7,38 +8,22 @@ class HomePage extends StatelessWidget {
     final days = 8;
     final str = "Welcome To Flutter Tutor";
     return Scaffold(
-      drawer: Drawer(
-        child: Column(
-          children: [
-            Padding(
-              padding: const EdgeInsets.fromLTRB(25, 30, 100, 5),
-              child: ElevatedButton(
-                  style: TextButton.styleFrom(
-                    minimumSize: Size(150, 40),
-                    backgroundColor: Color.fromARGB(0, 177, 244, 129),
-                  ),
-                  onPressed: () {
-                    Navigator.pushNamed(context, MyRoutes.loginRoute);
-                  },
-                  child: Text("Logout")),
-            ),
-            Padding(
-              padding: const EdgeInsets.fromLTRB(5, 30, 100, 5),
-              child: Text(
-                "Courses",
-                selectionColor: Color.fromARGB(255, 142, 111, 15),
-              ),
-            ),
-          ],
-        ),
-      ),
+      drawer: MyDrawer(),
       appBar: AppBar(
-        title: Center(child: Text("Flutter Tutor")),
-        shadowColor: Color.fromARGB(255, 174, 232, 220),
+        title: Padding(
+          padding: const EdgeInsets.fromLTRB(50, 0, 30, 0),
+          child: Text(
+            "Course Mart",
+            style: TextStyle(
+                fontWeight: FontWeight.w900, letterSpacing: 1, wordSpacing: 5),
+          ),
+        ),
+        shadowColor: Color.fromARGB(255, 110, 110, 110),
+        backgroundColor: Color.fromARGB(255, 226, 192, 79),
       ),
       body: Center(
         child: Container(
-          child: Text("$str" + "\n Learn Flutter in $days"),
+          child: Text("$str" + "\n Learn Flutter in $days" + "days"),
         ),
       ),
     );

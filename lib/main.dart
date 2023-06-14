@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: true,
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.teal,
         fontFamily: GoogleFonts.lato().fontFamily,
@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
       ),
       //initialRoute: "/home",
       /*initial route will always HomePage , btw by default "/" indicates the home route*/
-      initialRoute: "/",
+      initialRoute: MyRoutes.loginRoute,
       routes: {
         "/": (context) => LoginPage(),
         MyRoutes.homeRoute: (context) => HomePage(),
