@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_basics/pages/homePage.dart';
 import 'package:flutter_basics/pages/loginPage.dart';
 import 'package:flutter_basics/utils/routes.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter_basics/widgets/theme.dart';
+
 
 void main() {
   runApp(MyApp());
@@ -20,11 +21,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        primarySwatch: Colors.teal,
-        fontFamily: GoogleFonts.lato().fontFamily,
-        // primaryTextTheme: GoogleFonts.latoTextTheme(),
-      ),
+      theme: MyTheme.lightTheme(context),
+      darkTheme: MyTheme.lightTheme(context),
       //initialRoute: "/home",
       /*initial route will always HomePage , btw by default "/" indicates the home route*/
       initialRoute: MyRoutes.loginRoute,
