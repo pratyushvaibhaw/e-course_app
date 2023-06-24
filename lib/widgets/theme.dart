@@ -13,7 +13,8 @@ class MyTheme extends StatelessWidget {
         // primaryTextTheme: GoogleFonts.latoTextTheme(),
       );
   static ThemeData darkTheme(BuildContext context) =>
-      ThemeData(brightness: Brightness.dark);
+      ThemeData(brightness: Brightness.dark); 
+
 
   @override
   dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
