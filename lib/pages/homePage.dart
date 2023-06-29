@@ -9,14 +9,14 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     final days = 8;
     final str = "Welcome To Flutter Tutor";
-    //final dummyList = List.generate(4, (index) => ContentModel.platform[0]);
     return Scaffold(
       drawer: MyDrawer(),
       appBar: AppBar(
+        elevation: 0.2,
         /*App bar theme can also be set from themeData in main.dart */
         title: Center(
           child: Text(
-            "Course Mart",
+            "Course Junction",
             style: TextStyle(
                 color: Colors.black,
                 fontWeight: FontWeight.w900,
@@ -24,18 +24,10 @@ class HomePage extends StatelessWidget {
                 wordSpacing: 5),
           ),
         ),
-        //shadowColor: Color.fromARGB(255, 110, 110, 110),
+        shadowColor: Color.fromARGB(255, 221, 10, 10),
         //backgroundColor: Color.fromARGB(255, 226, 192, 79),
       ),
-      body: ListView.builder(
-        padding: const EdgeInsets.all(16),
-        itemCount: ContentModel.platform.length,
-        itemBuilder: (BuildContext context, int index) {
-          return ContentWidget(
-            platform: ContentModel.platform[index],
-          );
-        },
-      ),
+      body: ContentWidget(),
     );
   }
 }
