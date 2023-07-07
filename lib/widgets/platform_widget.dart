@@ -29,73 +29,158 @@ class ContentWidget extends StatelessWidget {
 
     // https://youtube.com/playlist?list=PLxgZQoSe9cg0df_GxVjz3DD_Gck5tMXAdc
     var _view = ListView();
-    return ListView(
-        padding: EdgeInsets.fromLTRB(2.5, 15, 2.5, 1),
-        scrollDirection: Axis.vertical,
+    return Container(
+      margin: EdgeInsets.fromLTRB(8, 8, 8, 8),
+      padding: const EdgeInsets.fromLTRB(8, 8, 8, 20),
+      child: GridView(
+        // padding: EdgeInsets.fromLTRB(4,4,),
+        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+            childAspectRatio: 3 / 2,
+            crossAxisCount: 2,
+            mainAxisSpacing: 20,
+            crossAxisSpacing: 20),
         children: [
-          Column(children: [
-            Card(
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(8)),
-              color: Color.fromARGB(255, 128, 179, 227),
-              elevation: 5,
-              shadowColor: Colors.black,
-              child: ListTile(
-                contentPadding: EdgeInsets.fromLTRB(10, 2, 0, 4),
-                // shape:
-                //     RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
-                leading: Image.asset(
-                  'assets/images/jennyC.jpg',
-                ),
-                minVerticalPadding: 12,
-                title: Text(
-                  "Programming in C by Jenny",
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-                trailing: Icon(Icons.navigate_next_rounded),
-                subtitle:
-                    Text("Datatypes , Variables , Arrays , Structures ...."),
-                enabled: true,
-                textColor: Color.fromARGB(255, 82, 62, 160),
-                hoverColor: Colors.white,
-                // tileColor: Color.fromARGB(255, 128, 179, 227),
-                onTap: _launchURL1,
+          Material(
+            //-----1
+            borderRadius: BorderRadius.circular(15),
+            elevation: 10,
+            shadowColor: Colors.black,
+            child: Container(
+              decoration: BoxDecoration(
+                color: Colors.amber,
+                borderRadius: BorderRadius.all(Radius.circular(15)),
               ),
             ),
-            SizedBox(
-              height: 2.5,
-            ),
-            Card(
-              elevation: 5,
-              shadowColor: Colors.black,
-              color: Color.fromARGB(255, 227, 211, 92),
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(8)),
-              child: ListTile(
-                contentPadding: EdgeInsets.fromLTRB(10, 2, 0, 4),
-                leading: Image.asset(
-                  'assets/images/java_dsa.jpg',
-                  height: 90,
-                  scale: 3,
-                ),
-                title: Text(
-                  "College Wallah DSA in JAVA",
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-                trailing: Icon(Icons.navigate_next_rounded),
-                subtitle: Text(
-                    "Java Architecture, Datatypes , Arrays ,Linked List.."),
-                enabled: true,
-                textColor: Color.fromARGB(255, 239, 73, 73),
-                hoverColor: Colors.white,
-                onTap: _launchURL2,
+          ),
+          Material(
+            //------2
+            borderRadius: BorderRadius.circular(15),
+            elevation: 10,
+            shadowColor: Colors.black,
+            child: Container(
+              decoration: BoxDecoration(
+                color: Colors.black,
+                borderRadius: BorderRadius.all(Radius.circular(15)),
               ),
-            )
-          ]),
-        ]);
+            ),
+          ),
+          Material(
+            //------3
+            borderRadius: BorderRadius.circular(15),
+            elevation: 10,
+            shadowColor: Colors.black,
+            child: Container(
+              decoration: BoxDecoration(
+                color: Colors.blueAccent,
+                borderRadius: BorderRadius.all(Radius.circular(15)),
+              ),
+            ),
+          ),
+          Material(
+            //------4
+            borderRadius: BorderRadius.circular(15),
+            elevation: 10,
+            shadowColor: Colors.black,
+            child: Container(
+              decoration: BoxDecoration(
+                color: Color.fromARGB(255, 203, 241, 32),
+                borderRadius: BorderRadius.all(Radius.circular(15)),
+              ),
+            ),
+          ),
+          Material(
+            //------5
+            borderRadius: BorderRadius.circular(15),
+            elevation: 10,
+            shadowColor: Colors.black,
+            child: Container(
+              decoration: BoxDecoration(
+                color: Colors.greenAccent,
+                borderRadius: BorderRadius.all(Radius.circular(15)),
+              ),
+            ),
+          ),
+          Material(
+            //------6
+            borderRadius: BorderRadius.circular(15),
+            elevation: 10,
+            shadowColor: Colors.black,
+            child: Container(
+              decoration: BoxDecoration(
+                color: Colors.pinkAccent,
+                borderRadius: BorderRadius.all(Radius.circular(15)),
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+
+    // ListView(
+    //     padding: EdgeInsets.fromLTRB(2.5, 15, 2.5, 1),
+    //     scrollDirection: Axis.vertical,
+    //     children: [
+    //       Column(children: [
+    //         Card(
+    //           shape: RoundedRectangleBorder(
+    //               borderRadius: BorderRadius.circular(8)),
+    //           color: Color.fromARGB(255, 128, 179, 227),
+    //           elevation: 5,
+    //           shadowColor: Colors.black,
+    //           child: ListTile(
+    //             contentPadding: EdgeInsets.fromLTRB(10, 2, 0, 4),
+
+    //             leading: Image.asset(
+    //               'assets/images/jennyC.jpg',
+    //             ),
+    //             minVerticalPadding: 12,
+    //             title: Text(
+    //               "Programming in C by Jenny",
+    //               style: TextStyle(
+    //                 fontWeight: FontWeight.bold,
+    //               ),
+    //             ),
+    //             trailing: Icon(Icons.navigate_next_rounded),
+    //             subtitle:
+    //                 Text("Datatypes , Variables , Arrays , Structures ...."),
+    //             enabled: true,
+    //             textColor: Color.fromARGB(255, 82, 62, 160),
+    //             hoverColor: Colors.white,
+    //             onTap: _launchURL1,
+    //           ),
+    //         ),
+    //         SizedBox(
+    //           height: 2.5,
+    //         ),
+    // Card(
+    //   elevation: 5,
+    //   shadowColor: Colors.black,
+    //   color: Color.fromARGB(255, 227, 211, 92),
+    //   shape: RoundedRectangleBorder(
+    //       borderRadius: BorderRadius.circular(8)),
+    //   child: ListTile(
+    //     contentPadding: EdgeInsets.fromLTRB(10, 2, 0, 4),
+    //     leading: Image.asset(
+    //       'assets/images/java_dsa.jpg',
+    //       height: 90,
+    //       scale: 3,
+    //     ),
+    //     title: Text(
+    //       "College Wallah DSA in JAVA",
+    //       style: TextStyle(
+    //         fontWeight: FontWeight.bold,
+    //       ),
+    //     ),
+    //     trailing: Icon(Icons.navigate_next_rounded),
+    //     subtitle: Text(
+    //         "Java Architecture, Datatypes , Arrays ,Linked List.."),
+    //     enabled: true,
+    //     textColor: Color.fromARGB(255, 239, 73, 73),
+    //     hoverColor: Colors.white,
+    //     onTap: _launchURL2,
+    //   ),
+    // )
+    //   ]),
+    // ]);
   }
 }
